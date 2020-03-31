@@ -1,0 +1,44 @@
+@model Card
+
+<head>
+    <link rel="stylesheet" href="~/css/Form_NewCard.css" />
+    <link rel="stylesheet" href="~/css/Home.css" />
+</head>
+
+<header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand font1-2">Flash Cards!</a>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <a href="/logout" class="text-right"><img class="menupic2" src="~/Images/Logout.png" alt="Logout"></a>
+                    <a href="/home" class="text-right text-dark"><img class="menupic" src="~/Images/Home.png" alt="Home"></a>
+                    <a href="/allcards/@ViewBag.ThisGroup.GroupId" class="text-right text-dark"><img class="menupic3" src="~/Images/BackArrow.png" alt="Back"></a>
+                </div>
+            </div>
+        </nav>
+</header>
+<br>
+<br>
+<br>
+<div class="row text-center">
+    <div class="col-md-4"></div>
+    <div class="col-md-8">
+        <div class="jumbotron">
+            <form action="/cardeditor/@ViewBag.ThisCard.CardId/@ViewBag.ThisGroup.GroupId" method="post">
+                <h2 class="fnt1">EDIT THIS FLASH CARD</h2>
+                <div class="form-group">
+                    <label class="font2">QUESTION</label>
+                    <span class="error1" asp-validation-for="Question"></span>
+                    <input asp-for="Question" class="form-control input1" value="@ViewBag.ThisCard.Question">
+                </div>
+                <div class="form-group">
+                    <label class="font2">ANSWER</label>
+                    <span class="error1" asp-validation-for="Answer"></span>
+                    <input asp-for="Answer" class="form-control input1" value="@ViewBag.ThisCard.Answer">
+                </div>
+                <input type="submit" value="SAVE CHANGES" class="btn btn-outline-success fnt1">
+            </form>
+        </div>
+    </div>
+</div>

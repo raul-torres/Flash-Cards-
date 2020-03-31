@@ -1,0 +1,27 @@
+@model Group
+<head>
+    <link rel="stylesheet" href="~/css/GH.css" />
+</head>
+<partial name="_Header">
+<br>
+<br>
+<br>
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8">
+        <div class="jumbotron text-center">
+            <h1 class="font1">@Model.Name.ToUpper()</h1>
+            <p class="fnt2"><a href="/newcard/@Model.GroupId">CREATE FLASH CARDS</a></p>
+            <br>
+            <p class="fnt2"><a href="/allcards/@Model.GroupId">SEE ALL (@Model.FlashCards.Count) FLASH CARDS</a></p>
+            <br>
+            <br>
+            <p class="fnt2"><a href="/quiz/@Model.GroupId">QUIZ</a></p>
+            <br><br>
+            <br><br>
+        </div>
+        <p class="menu1 menu1-1"></p>
+
+    </div>
+</div>

@@ -1,0 +1,32 @@
+
+
+
+.jumbotron{
+  width: 70%;
+  border-radius: 0%;
+  background-color: #565c5e;
+  font-weight: 500;
+  color: white;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+  .jumbotron:hover{
+    box-shadow: 0 40px 80px rgba(0,0,0,0.3);
+  }
+.animate-pop-in {
+  animation: pop-in .6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  opacity: 0;
+}
+.navbar{
+  background-color: #dfdbd8 !important ;
+  color: black;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+  .navbar:hover{
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  }
+.input1{
+  color: white;
+}
+

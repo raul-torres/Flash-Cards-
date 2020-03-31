@@ -1,0 +1,53 @@
+﻿@model User
+
+<head>
+    <link rel="stylesheet" href="~/css/index.css" />
+</head>
+<header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand font1-2">Flash Cards!</a>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_login">
+                </div>
+            </div>
+        </nav>
+</header>
+
+<br>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-10">
+            <div class="jumbotron vertical-center">
+                <form action="/register" method="post">
+                    <h1 class="display-4 text-center font1 animate pop-in">WELCOME</h1>
+                    <h5 class="text-center font1">LETS CREATE AN ACCOUNT</h5>
+                    <br>
+                    <div class="form-group">
+                        <label class="font2">ENTER YOUR NAME</label>
+                        <span class="error1" asp-validation-for="Name"></span>
+                        <input placeholder="NAME" class="form-control input1" asp-for="Name">
+                    </div>
+                    <div class="form-group">
+                        <label class="font2">ENTER YOUR EMAIL</label>
+                        <span class="error1" asp-validation-for="Email"></span>
+                        <input placeholder="EMAIL" class="form-control input1" asp-for="Email">
+                    </div>
+                    <div class="form-group">
+                        <label class="font2">ENTER YOUR PASSWORD</label>
+                        <span class="error1" asp-validation-for="Password"></span>
+                        <input placeholder="PASSWORD" class="form-control input1" asp-for="Password">
+                    </div>
+                    <div class="form-group">
+                        <label class="font2">CONFIRM YOUR PASSWORD</label>
+                        <span class="error1" asp-validation-for="ConfirmedPassword"></span>
+                        <input placeholder="CONFIRM PASSWORD" class="form-control input1" asp-for="ConfirmedPassword">
+                    </div>
+                    <div class="text-center">
+                        <input type="submit" value="SIGN UP" class="btn btn-outline-light"> 
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>

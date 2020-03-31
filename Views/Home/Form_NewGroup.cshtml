@@ -1,0 +1,31 @@
+@model Group
+<partial name="_Header">
+
+<head>
+    <link rel="stylesheet" href="~/css/Home.css" />
+</head>
+<br>
+<br>
+<br>
+<div class="row text-center">
+    <div class="col-md-4"></div>
+    <div class="col-md-8">
+        <div class="jumbotron">
+            <form action="/newgroup" method="post">
+                <h2 class="fnt1">LETS CREATE A NEW GROUP OF CARDS</h2>
+                <br>
+
+                <div class="form-group">
+                    <label class="font2">NAME YOUR GROUP</label>
+                    <br>
+                    <span class="error1" asp-validation-for="Name"></span>
+                    <input asp-for="Name" class="form-control input1" placeholder="NAME">
+                </div>
+                <br>
+                <br>
+
+                <input type="submit" value="ADD" class="btn btn-outline-light fnt1">
+            </form>
+        </div>
+    </div>
+</div>

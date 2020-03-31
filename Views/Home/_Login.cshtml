@@ -1,0 +1,11 @@
+@model LoginUser
+
+
+<form action="/login" method="post">
+    <input asp-for="LEmail" class="input2" placeholder="EMAIL" value="fatima@mail.com">
+    <input asp-for="LPassword" class="input2" placeholder="PASSWORD" value="q@123456789">
+    <input type="submit" value="Login" class="btn btn-outline-secondary btn-sm">
+    <br>
+    <span class="error2" asp-validation-for="LEmail"></span>
+    <span class="error3" asp-validation-for="LPassword"></span>
+</form>

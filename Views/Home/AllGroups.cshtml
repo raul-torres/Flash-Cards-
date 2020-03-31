@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="~/css/AllGroups.css" />
+    <link rel   ="stylesheet" href="~/css/component.css" />
+</head>
+
+<partial name="_Header">
+
+<br>
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8">
+        <div class="jumbotron text-center">
+            <h1 class="display-4 font1">YOUR GROUPS</h1>
+
+
+        @{
+            foreach(var i in ViewBag.EveryGroup)
+            {
+                <nav class="cl-effect-4">
+                    <a href="/grouphome/@i.GroupId">@i.Name</a>  
+                </nav>
+            }
+        }
+        </div>
+    </div>
+</div>
+
